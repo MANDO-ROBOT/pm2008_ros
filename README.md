@@ -2,7 +2,7 @@
 
 ## Dependencies
 ```
-$ sudo apt install ros-noetic-rosserial ros-noetic-rosserial-arduino
+$ sudo apt install ros-noetic-serial ros-noetic-rosserial ros-noetic-rosserial-arduino
 ```
 
 ## Usage

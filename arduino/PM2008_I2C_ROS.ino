@@ -1,13 +1,9 @@
 #include <pm2008_i2c.h>
 #include <MsTimer2.h>
-// #ifdef PM2008N
-
 PM2008_I2C pm2008_i2c;
 uint8_t ret;
 uint16_t tcnt = 1;
-
-void fineDust(){
-
+void dust(){
   if (ret == 0) {
     Serial.print("pm1p0g:");
     Serial.println(pm2008_i2c.pm1p0_grimm);
@@ -38,7 +34,6 @@ void fineDust(){
   Serial.println(tcnt);
   tcnt++;
 }
-
 void setup() {
 #ifdef PM2008N
   // wait for PM2008N to be changed to I2C mode
@@ -47,10 +42,9 @@ void setup() {
   pm2008_i2c.begin();
   Serial.begin(115200);
   pm2008_i2c.command();
-  uint8_t ret = pm2008_i2c.read();
-  MsTimer2::set(1000,fineDust);
+  MsTimer2::set(1000, dust);
   MsTimer2::start();
 }
-
 void loop() {
+  uint8_t ret = pm2008_i2c.read();
 }
