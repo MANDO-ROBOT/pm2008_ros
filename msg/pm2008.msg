@@ -1,0 +1,13 @@
+uint8 pm1p0g
+uint8 pm2p5g
+uint8 pm10g
+uint8 pm1p0t
+uint8 pm2p5t
+uint16 pm10t
+uint16 n0p3um
+uint16 n0p5um
+uint16 n1um
+uint16 n2p5um
+uint16 n5um
+uint16 n10um
+uint16 tcnt
